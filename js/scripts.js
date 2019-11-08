@@ -22,7 +22,7 @@ Pizza.prototype.orderPrice = function() {
   };
 
  // return pieCost;
- this.pieCost = pieCost;
+ this.pieCost += pieCost;
 };
 
 
@@ -35,6 +35,7 @@ $(document).ready(function() {
         var pizzaSize = $("#pizzaSize").val();
         var topping1 = $("#topping1").val();
         var topping2 = $("#topping2").val();
+        console.log("hi");
         var pieOrder = new Pizza(pizzaSize, topping1, topping2)
         pieOrder.orderPrice();
         $("#result").text("Thank you for your order. Your " + pieOrder.pizzaSize + "with " + pieOrder.topping1 + pieOrder.topping2 + "Your total is: " + pieOrder.pieCost)
