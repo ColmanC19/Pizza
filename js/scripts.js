@@ -4,18 +4,19 @@ function Pizza(size, toppings) {
   this.toppings = toppings;
 }
 
-Pizza.prototype.order = function() {
+Pizza.prototype.orderPrice = function() {
   var pieCost = 12;
-  if (this.size === 1) {
+  if (this.size === "L") {
     pieCost += 3;
-  } else if (this.size === 2) {
+  }
+   if (this.size === "XL") {
     pieCost += 6;
-  };
-  if (this.toppings.includes("chicken")) {
+  }
+  if (this.toppings.includes("Chicken", "Bacon")) {
     pieCost += 2;
-  } else if (this.toppings.includes("bacon")) {
-    pieCost += 2;
-  } else if (this.toppings.inludes("Olives", "Artichoke hearts")) {
+  }
+
+  if (this.toppings.inludes("Olives", "Artichoke hearts", "Onions")) {
     pieCost += 1;
   };
 
@@ -29,9 +30,10 @@ $(document).ready(function() {
     $("form#pizzaOrder").submit(function(event) {
         event.preventDefault();
         var pizzaSize = $("#pizzaSize").val();
-        var toppings = $(".checkbox").prop("checked");
-        var pieOrder = new Pizza(size, toppings)
-        pieOrder.order();
-        $("p#results").text("Thank you for your order. You're " + pieOrder.size + "with " + pieOrder.toppings + "Your total is: " + pieOrder.pieCost)
+        var topping1 = $("#topping1").val();
+        var topping2 = $("#topping2").val();
+        var pieOrder = new Pizza(pizzaSize, topping1, topping2)
+        pieOrder.orderPrice();
+        $("p#result").text("Thank you for your order. Your " + pieOrder.pizzaSize + "with " + pieOrder.topping1 + pieOrder.topping2 + "Your total is: " + pieOrder.pieCost)
     })
   });
