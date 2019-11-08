@@ -15,9 +15,12 @@ Pizza.prototype.orderPrice = function() {
   if (this.topping1.includes("Chicken", "Bacon")) {
     pieCost += 2;
   }
-  if (this.topping2.includes("Olives", "Artichoke hearts", "Onions")) {
+  // if (this.topping2.includes("Olives", "Artichoke hearts", "Onions", "Veggie blend")) {
+  //   pieCost += 1;
+  // }
+  if (this.topping2.includes("Olives", "Artichoke hearts", "Onions", "Veggie blend")) {
     pieCost += 1;
-  };
+  }
 
 
  this.pieCost = pieCost;
