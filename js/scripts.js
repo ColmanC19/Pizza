@@ -4,7 +4,7 @@ function Pizza(size, toppings) {
   this.toppings = toppings;
 }
 
-Pizza.prototype.order = function {
+Pizza.prototype.order = function() {
   var pieCost = 12;
   if (this.toppings.includes("chicken")) {
     pieCost += 2;
@@ -17,36 +17,20 @@ Pizza.prototype.order = function {
   };
   if (this.size === 1) {
     pieCost += 3;
-
+  };
+  if (this.size === 2) {
+    pieCost += 6;
   }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ return pieCost;
+ // this.pieCost = pieCost;
+};
 
 
 // business logic
 $(document).ready(function() {
     $("form#pizzaOrder").submit(function(event) {
         event.preventDefault();
-
+        var pizzaSize = $("#pizzaSize").val();
+        var toppings = $("#topping").join();
     })
   });
