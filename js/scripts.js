@@ -29,7 +29,7 @@ $(document).ready(function() {
     $("form#pizzaOrder").submit(function(event) {
         event.preventDefault();
         var pizzaSize = $("#pizzaSize").val();
-        var toppings = $(".check-box").join();
+        var toppings = $(".checkbox").prop("checked");
         var pieOrder = new Pizza(size, toppings)
         pieOrder.order();
         $("p#results").text("Thank you for your order. You're " + pieOrder.size + "with " + pieOrder.toppings + "Your total is: " + pieOrder.pieCost)
