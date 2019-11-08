@@ -4,3 +4,10 @@ background-color: #ff6347;
 .jumbotron {
   background-color: #ff6347;
 }
+#result {
+  font-size: 18px;
+}
+#call:hover{
+  color: black;
+  cursor: crosshair;
+}
