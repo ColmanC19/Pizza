@@ -16,13 +16,12 @@ Pizza.prototype.orderPrice = function() {
   if (this.topping1.includes("Chicken", "Bacon")) {
     pieCost += 2;
   }
-
-  if (this.topping2.inludes("Olives", "Artichoke hearts", "Onions")) {
+  if (this.topping2.includes("Olives", "Artichoke hearts", "Onions")) {
     pieCost += 1;
   };
 
  // return pieCost;
- this.pieCost += pieCost;
+ this.pieCost = pieCost;
 };
 
 
@@ -31,13 +30,12 @@ Pizza.prototype.orderPrice = function() {
 $(document).ready(function() {
     $("form#pizzaOrder").submit(function(event) {
         event.preventDefault();
-        console.log(alert("hi"));
         var pizzaSize = $("#pizzaSize").val();
         var topping1 = $("#topping1").val();
         var topping2 = $("#topping2").val();
-        console.log("hi");
         var pieOrder = new Pizza(pizzaSize, topping1, topping2)
         pieOrder.orderPrice();
-        $("#result").text("Thank you for your order. Your " + pieOrder.pizzaSize + "with " + pieOrder.topping1 + pieOrder.topping2 + "Your total is: " + pieOrder.pieCost)
+        $("#result").text("Thank you for your order. Your " + pieOrder.pizzaSize + "with " + pieOrder.topping1 + " and " + pieOrder.topping2 + "Your total is: " + pieOrder.pieCost);
+
     })
   });
