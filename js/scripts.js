@@ -6,18 +6,12 @@ function Pizza(pizzaSize, topping1, topping2) {
   this.pieCost = 12;
 }
 Pizza.prototype.orderPrice = function() {
-
-  if (this.pizzaSize.includes("Large")) {
-    this.pieCost = 12;
-  } else if (this.pizzaSize.includes("XL")) {
+  if (this.pizzaSize.includes("XL")) {
     this.pieCost += 6;
   }
   if (this.topping1.includes("Chicken", "Bacon")) {
     this.pieCost += 2;
   }
-  // if (this.topping2.includes("Olives", "Artichoke hearts", "Onions", "Veggie blend")) {
-  //   pieCost += 1;
-  // }
   if (this.topping2.includes("Olives", "Artichoke hearts", "Onions", "Veggie blend")) {
     this.pieCost += 1;
   }
