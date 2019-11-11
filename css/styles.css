@@ -6,6 +6,7 @@ background-color: #ff6347;
 }
 #result {
   font-size: 18px;
+  background-color: white;
 }
 #call:hover{
   color: black;
