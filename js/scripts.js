@@ -3,27 +3,24 @@ function Pizza(pizzaSize, topping1, topping2) {
   this.pizzaSize = pizzaSize;
   this.topping1 = topping1;
   this.topping2 = topping2;
+  this.pieCost = 12;
 }
-  var pieCost = 12;
 Pizza.prototype.orderPrice = function() {
-  var pieCost = 12;
+
   if (this.pizzaSize.includes("Large")) {
-    pieCost = 12;
+    this.pieCost = 12;
   } else if (this.pizzaSize.includes("XL")) {
-    pieCost += 6;
+    this.pieCost += 6;
   }
   if (this.topping1.includes("Chicken", "Bacon")) {
-    pieCost += 2;
+    this.pieCost += 2;
   }
   // if (this.topping2.includes("Olives", "Artichoke hearts", "Onions", "Veggie blend")) {
   //   pieCost += 1;
   // }
   if (this.topping2.includes("Olives", "Artichoke hearts", "Onions", "Veggie blend")) {
-    pieCost += 1;
+    this.pieCost += 1;
   }
-
-
- this.pieCost = pieCost;
 };
 
 
