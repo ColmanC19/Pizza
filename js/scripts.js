@@ -5,18 +5,18 @@ function Pizza(pizzaSize, topping1, topping2) {
   this.topping2 = topping2;
   this.pieCost = 12;
 }
+let toppings = ["Chicken", "Bacon", "Olives", "Artichoke hearts", "Onions", "Veggie blend"];
 Pizza.prototype.orderPrice = function() {
   if (this.pizzaSize.includes("XL")) {
     this.pieCost += 6;
   }
-  if (this.topping1.includes("Chicken", "Bacon")) {
+  if (toppings.includes(this.topping1)) {
     this.pieCost += 2;
   }
-  if (this.topping2.includes("Olives", "Artichoke hearts", "Onions", "Veggie blend")) {
+  if (toppings.includes(this.topping2)) {
     this.pieCost += 1;
   }
 };
-
 
 // business logic
 $(document).ready(function() {
