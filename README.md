@@ -3,21 +3,31 @@ Week 4 Epicodus project. Create a pizza website order form using object oriented
 
 
 
-Week 4 project for epidocus using object oriented javascript. . 11.8.2019
+## Week 4 project for epidocus using object oriented javascript. . 11.8.2019
 By Colman Currie
 Fourth independent project I completed for Epicodus.
 Form that will allow user to order pizzas.
 
-Setup/Installation Requirements
+## Setup/Installation Requirements
 Using your terminal you can git clone this project to your desktop.
 
 Then you will call the directory using your terminal, make sure you're in the desktop and cd "project name here"
 
 If you don't wish to make any changes you can simply double click the index.html inside that cloned directory and it will open an html page in your internet browser.
 
-_Or visit the page here: https://colmanc19.github.io/Pizza/
+Or visit the page here: https://colmanc19.github.io/Pizza/
+
+## Specs
+1. Allow user to select size of pizza they'd like. Expected output: $12 or $18, depending on size.
+example: XL pizza is selected|| outcome: $18.
+2. Allow user to select their first topping. Expected output: +$2 to pizza cost or no extra charge.
+example: XL pizza with bacon|| outcome: $20.
+3. Allow user to select their second topping. Expected output: +$1 or no extra charge.
+example: XL Pizza with bacon and olives|| outcome: $21.
 
 
+
+## Issues
 No known bugs at this point
 
 If you run into any issues, or want any additional information please contact me at curriecolman@gmail.com.
