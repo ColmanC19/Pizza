@@ -33,7 +33,7 @@ No known bugs at this point
 
 If you run into any issues, or want any additional information please contact me at curriecolman@gmail.com.
 
-I used html, css, javascript, bootstrap (* Bootstrap v3.3.7 (http://getbootstrap.com)) and jquery (jQuery JavaScript Library v3.4.1 https://jquery.com/).
+I used html, css, javascript, [ Bootstrap v3.3.7](http://getbootstrap.com) and  [jQuery JavaScript Library v3.4.1](https://jquery.com/).
 
 License
 Copyright (c) <2019>
